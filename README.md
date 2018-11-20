@@ -14,9 +14,8 @@ Summary: Calculates exact tests and confidence intervals for one-sample binomial
 Current build status
 ====================
 
-[![Linux](https://img.shields.io/circleci/project/github/conda-forge/r-exactci-feedstock/master.svg?label=Linux)](https://circleci.com/gh/conda-forge/r-exactci-feedstock)
-[![OSX](https://img.shields.io/travis/conda-forge/r-exactci-feedstock/master.svg?label=macOS)](https://travis-ci.org/conda-forge/r-exactci-feedstock)
-[![Windows](https://img.shields.io/appveyor/ci/conda-forge/r-exactci-feedstock/master.svg?label=Windows)](https://ci.appveyor.com/project/conda-forge/r-exactci-feedstock/branch/master)
+All platforms:
+[![noarch](https://img.shields.io/circleci/project/github/conda-forge/r-exactci-feedstock/master.svg?label=noarch)](https://circleci.com/gh/conda-forge/r-exactci-feedstock)
 
 Current release info
 ====================
