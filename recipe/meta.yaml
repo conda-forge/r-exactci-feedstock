@@ -14,9 +14,9 @@ source:
   sha256: 1ad8eb85765e1d03f9d075d550a784735bc7a50eebfa41dc2d9365df8c2b230f
 
 build:
+  noarch: generic
   merge_build_host: True  # [win]
-  number: 0
-  skip: true  # [win32]
+  number: 1000
   rpaths:
     - lib/R/lib/
     - lib/
@@ -42,8 +42,7 @@ about:
   summary: 'Calculates exact tests and confidence intervals for one-sample binomial and one-
     or two-sample Poisson cases. '
   license_family: GPL3
-  license_file: '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3'  # [unix]
-  license_file: '{{ environ["PREFIX"] }}\R\share\licenses\GPL-3'  # [win]
+  license_file: '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3'
 
 extra:
   recipe-maintainers:
