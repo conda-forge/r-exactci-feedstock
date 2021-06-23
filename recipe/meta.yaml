@@ -7,16 +7,15 @@ package:
   version: {{ version|replace("-", "_") }}
 
 source:
-  fn: exactci_{{ version }}.tar.gz
   url:
     - {{ cran_mirror }}/src/contrib/exactci_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/exactci/exactci_{{ version }}.tar.gz
   sha256: 279294a0ef7c9e968ef5d9c321f53430bdf3aaab787aebf892d5b8236fc5f022
 
 build:
-  noarch: generic
-  merge_build_host: true  # [win]
+  merge_build_host: True  # [win]
   number: 0
+  noarch: generic
   rpaths:
     - lib/R/lib/
     - lib/
@@ -24,12 +23,15 @@ build:
 requirements:
   build:
     - {{ posix }}zip               # [win]
+    - cross-r-base {{ r_base }}    # [build_platform != target_platform]
   host:
     - r-base
     - r-ssanv
+    - r-testthat
   run:
     - r-base
     - r-ssanv
+    - r-testthat
 
 test:
   commands:
@@ -38,10 +40,11 @@ test:
 
 about:
   home: https://CRAN.R-project.org/package=exactci
-  license: GPL-3
+  license: GPL-3.0-only
   summary: 'Calculates exact tests and confidence intervals for one-sample binomial and one- or two-sample Poisson cases. '
   license_family: GPL3
-  license_file: {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3
+  license_file:
+    - {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3
 
 extra:
   recipe-maintainers:
