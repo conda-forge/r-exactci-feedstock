@@ -1,11 +1,11 @@
-About r-exactci
-===============
+About r-exactci-feedstock
+=========================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-exactci-feedstock/blob/main/LICENSE.txt)
 
 Home: https://CRAN.R-project.org/package=exactci
 
 Package license: GPL-3.0-only
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-exactci-feedstock/blob/main/LICENSE.txt)
 
 Summary: Calculates exact tests and confidence intervals for one-sample binomial and one- or two-sample Poisson cases. 
 
